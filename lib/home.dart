@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import './gochain/retrieveAddress.dart';
+import './gochain/retrieveBlocks.dart';
+import './gochain/retrieveStats.dart';
+import './gochain/retrieveTransaction.dart';
+
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
