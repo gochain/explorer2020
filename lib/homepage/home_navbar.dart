@@ -9,33 +9,32 @@ class Navbar extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(15),
             width: 1920,
-            height: 50,
+            height: 45,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                color: Color(0xFFFFFFFF)),
+                borderRadius: BorderRadius.circular(40), color: Colors.white),
             child: Row(
               children: [
                 Image.asset('assets/gochainicon.png'),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
-                _Buttons('Home'),
+                _Buttons(400, 'Home'),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
-                _Buttons('Rich List'),
+                _Buttons(200, 'Rich List'),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
-                _Buttons('Contracts'),
+                _Buttons(200, 'Contracts'),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
-                _Buttons('Wallet'),
+                _Buttons(200, 'Wallet'),
                 SizedBox(
-                  width: 20,
+                  width: 40,
                 ),
-                _Buttons('Signers'),
+                _Buttons(200, 'Signers'),
               ],
             ),
           ),
@@ -46,16 +45,17 @@ class Navbar extends StatelessWidget {
 }
 
 class _Buttons extends StatelessWidget {
+  final int colornum;
   final String text;
-  const _Buttons(this.text);
+  const _Buttons(this.colornum, this.text);
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-        color: Colors.grey[200],
+        color: Colors.grey[colornum],
         height: 35,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+            borderRadius: BorderRadius.all(Radius.circular(12))),
         onPressed: () {},
         child:
             Text(text, style: (TextStyle(fontSize: 18, color: Colors.black))));
