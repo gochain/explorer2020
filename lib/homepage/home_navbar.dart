@@ -9,7 +9,7 @@ class Navbar extends StatelessWidget {
           Container(
             margin: EdgeInsets.all(15),
             width: 1920,
-            height: 45,
+            height: 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40), color: Colors.white),
             child: Row(
@@ -53,9 +53,9 @@ class _Buttons extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
         color: Colors.grey[colornum],
-        height: 35,
+        height: 40,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12))),
+            borderRadius: BorderRadius.all(Radius.circular(15))),
         onPressed: () {},
         child:
             Text(text, style: (TextStyle(fontSize: 18, color: Colors.black))));
