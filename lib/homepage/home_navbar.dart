@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './home.dart';
 
 class Navbar extends StatelessWidget {
   @override
@@ -18,23 +19,23 @@ class Navbar extends StatelessWidget {
                 SizedBox(
                   width: 40,
                 ),
-                _Buttons(400, 'Home'),
+                _Buttons(400, 'Home', '/Home'),
                 SizedBox(
                   width: 40,
                 ),
-                _Buttons(200, 'Rich List'),
+                _Buttons(200, 'Rich List', '/RichList'),
                 SizedBox(
                   width: 40,
                 ),
-                _Buttons(200, 'Contracts'),
+                _Buttons(200, 'Contracts', '/Contracts'),
                 SizedBox(
                   width: 40,
                 ),
-                _Buttons(200, 'Wallet'),
+                _Buttons(200, 'Wallet', '/Wallet'),
                 SizedBox(
                   width: 40,
                 ),
-                _Buttons(200, 'Signers'),
+                _Buttons(200, 'Signers', '/Signers'),
               ],
             ),
           ),
@@ -47,7 +48,8 @@ class Navbar extends StatelessWidget {
 class _Buttons extends StatelessWidget {
   final int colornum;
   final String text;
-  const _Buttons(this.colornum, this.text);
+  final String route;
+  const _Buttons(this.colornum, this.text, this.route);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +58,9 @@ class _Buttons extends StatelessWidget {
         height: 40,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15))),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, route);
+        },
         child:
             Text(text, style: (TextStyle(fontSize: 18, color: Colors.black))));
   }
