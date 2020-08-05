@@ -15,6 +15,6 @@ dynamic fetchBlockDetails(blockNumber) async {
 
 // Get specific block transactons
 dynamic fetchBlockTransactions(blockNumber) async {
-    var response = await http.get('https://explorer.gochain.io/api/blocks/$blockNumber}/transactions');
+    var response = await http.get('https://explorer.gochain.io/api/blocks/$blockNumber/transactions');
     return json.decode(response.body);
 }
