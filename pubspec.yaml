@@ -33,7 +33,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  wave: ^0.0.8
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -49,6 +48,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/gochainicon.png
+    - assets/gochain.png
+    - assets/footer.png
+    - assets/homewaves.png
+    - assets/contractswaves.png
+    - assets/richlistwaves.png
+    - assets/signerswaves.png
+    - assets/walletwaves.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

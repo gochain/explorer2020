@@ -18,9 +18,20 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            child: Column(
-      children: [Navbar(), SearchBar()],
-    )));
+      height: double.infinity,
+      width: double.infinity,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/homewaves.png'), fit: BoxFit.fill)),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Navbar(),
+            SearchBar(),
+          ],
+        ),
+      ),
+    ));
   }
 }
 
@@ -29,9 +40,15 @@ class RichListState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/richlistwaves.png'),
+                    fit: BoxFit.fill)),
             child: Column(
-      children: [Navbar()],
-    )));
+              children: [Navbar()],
+            )));
   }
 }
 
@@ -40,9 +57,15 @@ class ContractsState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/contractswaves.png'),
+                    fit: BoxFit.fill)),
             child: Column(
-      children: [Navbar()],
-    )));
+              children: [Navbar()],
+            )));
   }
 }
 
@@ -51,9 +74,15 @@ class WalletState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/walletwaves.png'),
+                    fit: BoxFit.fill)),
             child: Column(
-      children: [Navbar()],
-    )));
+              children: [Navbar()],
+            )));
   }
 }
 
@@ -62,8 +91,14 @@ class SignersState extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/signers waves.png'),
+                    fit: BoxFit.fill)),
             child: Column(
-      children: [Navbar()],
-    )));
+              children: [Navbar()],
+            )));
   }
 }
