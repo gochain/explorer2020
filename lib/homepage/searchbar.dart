@@ -9,7 +9,7 @@ class SearchBar extends StatelessWidget {
           child: Column(
         children: [
           Container(
-              width: 1200,
+              width: 1300,
               height: 100,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20), color: Colors.white),
@@ -26,20 +26,36 @@ class SearchBar extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Container(
-                      width: 1150,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.grey[300]),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius: const BorderRadius.all(
-                                    const Radius.circular(20))),
-                            labelText:
-                                'Search by transaction, address, or block'),
-                      ))
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 25, right: 10),
+                        child: Container(
+                            width: 1180,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: Colors.grey[300]),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                      borderRadius: const BorderRadius.all(
+                                          const Radius.circular(20))),
+                                  labelText:
+                                      'Search by transaction, address, or block'),
+                            )),
+                      ),
+                      MaterialButton(
+                          height: 40,
+                          minWidth: 50,
+                          color: Colors.grey[700],
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20))),
+                          onPressed: () {},
+                          child: Icon(Icons.search))
+                    ],
+                  )
                 ],
               ))
         ],
