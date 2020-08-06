@@ -8,13 +8,16 @@ class Navbar extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(15),
+            margin: EdgeInsets.only(bottom: 20, left: 15, right: 15, top: 20),
             width: 1920,
             height: 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40), color: Colors.white),
             child: Row(
               children: [
+                SizedBox(
+                  width: 10,
+                ),
                 Image.asset('assets/gochainicon.png'),
                 SizedBox(
                   width: 40,
