@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'home_navbar.dart';
 import 'searchbar.dart';
-
 import '../gochain/retrieveAddress.dart';
 import '../gochain/retrieveBlocks.dart';
 import '../gochain/retrieveStats.dart';
 import '../gochain/retrieveTransaction.dart';
+import '../search/address.dart';
+import '../search/block.dart';
+import '../search/txid.dart';
 
 class Home extends StatefulWidget {
   @override
