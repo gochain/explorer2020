@@ -46,8 +46,10 @@ class RichListState extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/richlistwaves.png'),
                     fit: BoxFit.fill)),
-            child: Column(
-              children: [Navbar()],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
             )));
   }
 }
@@ -63,8 +65,10 @@ class ContractsState extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/contractswaves.png'),
                     fit: BoxFit.fill)),
-            child: Column(
-              children: [Navbar()],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
             )));
   }
 }
@@ -80,8 +84,10 @@ class WalletState extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/walletwaves.png'),
                     fit: BoxFit.fill)),
-            child: Column(
-              children: [Navbar()],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
             )));
   }
 }
@@ -97,8 +103,10 @@ class SignersState extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage('assets/signers waves.png'),
                     fit: BoxFit.fill)),
-            child: Column(
-              children: [Navbar()],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
             )));
   }
 }
