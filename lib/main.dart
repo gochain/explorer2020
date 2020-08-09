@@ -14,6 +14,10 @@ class Explorer extends StatelessWidget {
         '/Contracts': (context) => ContractsState(),
         '/Wallet': (context) => WalletState(),
         '/Signers': (context) => SignersState(),
+        '/RBlocks': (context) => RBlocksState(),
+        '/RTransactions': (context) => RTransactionsState(),
+        '/Account': (context) => AccountState(),
+        '/Address': (context) => AddressState(),
       },
     );
   }
