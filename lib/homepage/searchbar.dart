@@ -57,23 +57,10 @@ class SearchBar extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           onPressed: () {
-                            if (searchField.text.startsWith("0x") &&
-                                searchField.text.trim().length == 42) {
+                            if (searchField.text.startsWith("0x") && searchField.text.trim().length == 42) {
                               print("ADDRESS INPUT RECOGNIZED");
-<<<<<<< HEAD
                             }
                             else if(searchField.text.startsWith("0x") && searchField.text.trim().length == 66) {
-                              try {
-                                print("BLOCK INPUT RECOGNIZED");
-                              } 
-                              on FormatException {
-                                print("TRANSACTION INPUT RECOGNIZED");
-                              }
-=======
-                            } else if (searchField.text.startsWith("0x") &&
-                                searchField.text.trim().length == 66) {
-                              print("TRANSACTION OR BLOCK INPUT RECOGNIZED");
->>>>>>> 7d1d21b4de36ce06fb7178698409bb3af95b1052
                               //! TODO: Detect difference from a transaction input and a block input.
                             } else {
                               print("INVALID ENTRY");
