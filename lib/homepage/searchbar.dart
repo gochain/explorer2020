@@ -1,9 +1,11 @@
-import '../gochain/retrieveBlocks.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+import '../gochain/retrieveBlocks.dart';
+
 
 class SearchBar extends StatelessWidget {
   final searchField = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -58,12 +60,32 @@ class SearchBar extends StatelessWidget {
                                   BorderRadius.all(Radius.circular(20))),
                           onPressed: () {
                             if (searchField.text.startsWith("0x") && searchField.text.trim().length == 42) {
-                              print("ADDRESS INPUT RECOGNIZED");
+                              Fluttertoast.showToast(
+                                  msg: "Address hash recognized.",
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.CENTER,
+                                  timeInSecForIosWeb: 1,
+                                  webPosition: "center",
+                                  webBgColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                                  backgroundColor: Colors.red,
+                                  textColor: Colors.white,
+                                  fontSize: 16.0
+                            );
                             }
                             else if(searchField.text.startsWith("0x") && searchField.text.trim().length == 66) {
                               //! TODO: Detect difference from a transaction input and a block input.
                             } else {
-                              print("INVALID ENTRY");
+                                Fluttertoast.showToast(
+                                  msg: "You have provided an invalid entry.",
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.CENTER,
+                                  timeInSecForIosWeb: 1,
+                                  webPosition: "center",
+                                  webBgColor: "linear-gradient(to right, #D7816A, #BD4F6C)",
+                                  backgroundColor: Colors.red,
+                                  textColor: Colors.white,
+                                  fontSize: 16.0
+                            );
                               //! Add some type of notification system to alert that an invalid input was provided.
                             }
                           },
