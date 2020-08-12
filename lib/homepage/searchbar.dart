@@ -1,4 +1,4 @@
-import 'package:explorer2020/gochain/retrieveTransaction.dart';
+import '../gochain/retrieveBlocks.dart';
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
@@ -62,7 +62,12 @@ class SearchBar extends StatelessWidget {
                               print("ADDRESS INPUT RECOGNIZED");
                             }
                             else if(searchField.text.startsWith("0x") && searchField.text.trim().length == 66) {
-                              print("TRANSACTION OR BLOCK INPUT RECOGNIZED");
+                              try {
+                                print("BLOCK INPUT RECOGNIZED");
+                              } 
+                              on FormatException {
+                                print("TRANSACTION INPUT RECOGNIZED");
+                              }
                               //! TODO: Detect difference from a transaction input and a block input.
                             }
                             else {
