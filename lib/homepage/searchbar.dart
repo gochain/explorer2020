@@ -2,7 +2,6 @@ import '../gochain/retrieveBlocks.dart';
 import 'package:flutter/material.dart';
 
 class SearchBar extends StatelessWidget {
-
   final searchField = TextEditingController();
 
   @override
@@ -47,7 +46,7 @@ class SearchBar extends StatelessWidget {
                                           const Radius.circular(20))),
                                   labelText:
                                       'Search by transaction, address, or block'),
-                                  controller: searchField,
+                              controller: searchField,
                             )),
                       ),
                       MaterialButton(
@@ -58,8 +57,10 @@ class SearchBar extends StatelessWidget {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           onPressed: () {
-                            if(searchField.text.startsWith("0x") && searchField.text.trim().length == 42) {
+                            if (searchField.text.startsWith("0x") &&
+                                searchField.text.trim().length == 42) {
                               print("ADDRESS INPUT RECOGNIZED");
+<<<<<<< HEAD
                             }
                             else if(searchField.text.startsWith("0x") && searchField.text.trim().length == 66) {
                               try {
@@ -68,13 +69,16 @@ class SearchBar extends StatelessWidget {
                               on FormatException {
                                 print("TRANSACTION INPUT RECOGNIZED");
                               }
+=======
+                            } else if (searchField.text.startsWith("0x") &&
+                                searchField.text.trim().length == 66) {
+                              print("TRANSACTION OR BLOCK INPUT RECOGNIZED");
+>>>>>>> 7d1d21b4de36ce06fb7178698409bb3af95b1052
                               //! TODO: Detect difference from a transaction input and a block input.
-                            }
-                            else {
+                            } else {
                               print("INVALID ENTRY");
                               //! Add some type of notification system to alert that an invalid input was provided.
                             }
-                            
                           },
                           child: Icon(Icons.search))
                     ],

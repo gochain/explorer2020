@@ -112,3 +112,79 @@ class SignersState extends StatelessWidget {
             )));
   }
 }
+
+class RBlocksState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/signers waves.png'),
+                    fit: BoxFit.fill)),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
+            )));
+  }
+}
+
+class RTransactionsState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/signers waves.png'),
+                    fit: BoxFit.fill)),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
+            )));
+  }
+}
+
+class AccountState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/signers waves.png'),
+                    fit: BoxFit.fill)),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
+            )));
+  }
+}
+
+class AddressState extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/signers waves.png'),
+                    fit: BoxFit.fill)),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [Navbar()],
+              ),
+            )));
+  }
+}
